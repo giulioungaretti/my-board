@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "My Board — Quick save",
+  "version": "0.1.0",
+  "description": "Keep a product's picture, name, and tags on your private, local My Board.",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": ["http://127.0.0.1:4317/*", "http://localhost:4317/*"],
+  "action": {
+    "default_title": "Save to My Board",
+    "default_popup": "index.html",
+    "default_icon": {
+      "16": "icons/16.png",
+      "32": "icons/32.png",
+      "48": "icons/48.png",
+      "128": "icons/128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/16.png",
+    "32": "icons/32.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  },
+  "content_security_policy": {
+    "extension_pages": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' https: http: data:; connect-src http://127.0.0.1:4317 http://localhost:4317; object-src 'none'; base-uri 'self'"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "my-board@giulioungaretti"
+    }
+  }
+}
